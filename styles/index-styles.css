@@ -7,6 +7,9 @@
     --separation-lines: #E0E0E0;
     --emphasis-blue: #0F62FE;
 
+    --scrollbar: #B0B0B0;
+    --scrollbar-hover: #646464;
+
     --sm: 1.4rem;
     --nm: 1.6rem;
     --md: 1.8rem;
@@ -117,6 +120,10 @@ body {
 
 .navigation-menu li {
     margin-top: .4rem;
+}
+
+.navigation-menu li:nth-child(1) img {
+    border-right: .2rem solid var(--scrollbar-hover);
 }
 
 .navigation-menu img {
