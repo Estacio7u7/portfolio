@@ -119,7 +119,7 @@ function renderProjects(frontArray) {
         })
 
         const projectSpanTechnologies = document.createElement('span');
-        projectSpanTechnologies.innerHTML = 'Logros Obtenidos';
+        projectSpanTechnologies.innerHTML = 'Tecnologias aplicadas';
 
         const technologiesApplied = document.createElement('ul');
         
