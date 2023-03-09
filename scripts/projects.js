@@ -9,10 +9,10 @@ function toggleVisualization() {
     console.log('togling');
 }
 
-const projects = [];
+const engineeringProjects = [];
 
 function fillProjects() {
-    projects.push(
+    engineeringProjects.push(
         {
             name: 'Rediseño del prototipo Cardio One V1.0 y desarrollo de algoritmos confiables que permiten la identificación de biomarcadores a partir de las señales ECG y PPG',
             role: 'Investigador Junior en mecatrónica',
@@ -31,7 +31,7 @@ function fillProjects() {
         }
     )
 
-    projects.push(
+    engineeringProjects.push(
         {
             name: 'Robot para asistencia en entorno doméstico para enfermos de COVID-19',
             role: 'Investigador Junior en Mecatrónica',
@@ -48,7 +48,7 @@ function fillProjects() {
         }
     )
 
-    projects.push(
+    engineeringProjects.push(
         {
             name: 'Diseño de un dispositivo capaz de alertar de obstáculos en el tren superior para personas con baja visión y ceguera',
             role: 'Investigador Junior en Mecatrónica',
@@ -150,4 +150,4 @@ function renderProjects(projectsArray) {
     });
 }
 
-renderProjects(projects);
+renderProjects(engineeringProjects);

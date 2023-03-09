@@ -141,7 +141,7 @@ body {
     padding-right: .4rem;
 }
 
-.introdution {
+.introduction {
     display: flex;
     place-items: center;
     flex-direction: column;
@@ -149,7 +149,7 @@ body {
     margin-top: 1.6rem;
 }
 
-.introdution p:nth-child(1){
+.introduction__title {
     margin-top: 1.6rem;
     text-align: center;
     color: var(--gold-titles);
@@ -157,7 +157,7 @@ body {
     font-size: var(--vl);
 }
 
-.introdution p:nth-child(2){
+.introduction__paragraph {
     margin-top: 1.6rem;
     text-align: justify;
     font-size: var(--md);
@@ -230,12 +230,12 @@ body {
 }
 
 @media (min-width: 640px) {
-    .introdution {
+    .introduction {
         max-width: 45rem;
         margin-left: 7rem;
     }
     
-    .introdution p:nth-child(1){
+    .introduction__title {
         font-size: var(--gg);
     }
 
