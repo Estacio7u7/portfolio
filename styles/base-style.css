@@ -125,6 +125,12 @@ body {
     margin-top: .4rem;
 }
 
+.navigation-menu img:hover {
+    border: .2rem solid var(--scrollbar-hover);
+    background-color: var(--shadows);
+    border-radius: .8rem;
+}
+
 .navigation-menu img {
     width: 3.6rem;
     height: 3.6rem;
@@ -132,10 +138,14 @@ body {
 
 .site-content{
     position: absolute;
-    top: 6rem;
+    top: 5rem;
+
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
 
     width: 100%;
-    height: calc(100% - 10rem);
+    height: calc(100% - 5rem);
+    overflow-y: scroll;
 }
 
 /* height */
@@ -163,14 +173,18 @@ body {
     background: var(--scrollbar-hover);
 }
 
+@media (min-width:640px) {
+    .site-content {
+        padding: 0;
+        width: calc(100% - 4.8rem);
+        margin-left: 2.4rem;
+        margin-right: 2.4rem;
+    }    
+}
+
 @media (min-width:800px){
     .header figure {
         display: none;
-    }
-
-    .header {
-        display: flex;
-        justify-content: space-between;
     }
 
     .navigation-menu {

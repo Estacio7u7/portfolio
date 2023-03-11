@@ -9,12 +9,12 @@
 }
 
 .title {
-    width: 75%;
-    margin: 1.2rem;
+    width: 100%;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
     padding: 1.6rem;
     background-color: var(--shadows);
     border-radius: 1.2rem;
-
 }
 
 .title__divider {
@@ -103,9 +103,9 @@
     }
 
     .title {
-        min-width: 36rem;
-        max-width: 36rem;
-
+        min-width: 40rem;
+        max-width: 40rem;
+        margin-right: 1.6rem;
         white-space: normal;
     }
 
@@ -117,24 +117,7 @@
         margin-right: 5.2rem;
     }
 
-    .header figure {
-        display: none;
-    }
-
-    .header {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .navigation-menu {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-
     .title {
         width: 50rem;
     }
-
-
 }
