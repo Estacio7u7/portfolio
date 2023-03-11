@@ -43,11 +43,11 @@ function renderMainPage() {
 
     const mainTitle = document.createElement('p');
     mainTitle.classList.add('introduction__title')
-    mainTitle.innerHTML = 'Bienvenido a mi Portfolio';
+    mainTitle.innerHTML = 'Bienvenido a mi Portafolio';
     
     const intParagraph = document.createElement('P')
     intParagraph.classList.add('introduction__paragraph')
-    intParagraph.innerHTML = 'Personalmente nunca he sido bueno en presentarme a mí mismo, me gusta más que mis proyectos y mis acciones hablen por mí. Es así como decidí crear un sitio web que, al mismo tiempo de presentar una galería de mis estudios y proyectos, es una demostración fiel de mis capacidades en desarrollo y despliegue como FrontEnd Developer.';
+    intParagraph.innerHTML = 'Soy Ingeniero mecatrónico con énfasis en automatización industrial egresado de la Universidad Santo Tomás con facultades en análisis de sistemas y mantenimiento. Poseo conocimientos en planificación y ejecución de proyectos I+D+I, diseño y desarrollo de dispositivos prototipo bajo herramientas CAD-CAM, programación de PLCs bajo metodología GRAFCET y guía GEMMA, programación de sistemas embebidos ESP32, Arduino y microcontroladores PIC. En esta página se encuentran mis proyectos, estudios y certificaciones.';
 
     introduction.appendChild(mainTitle);
     introduction.appendChild(intParagraph);
