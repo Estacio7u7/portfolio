@@ -9,12 +9,19 @@
 }
 
 .title {
-    width: 100%;
+    width: 95%;
+    
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
+
     padding: 1.6rem;
+    
     background-color: var(--shadows);
     border-radius: 1.2rem;
+}
+
+.title__class {
+    font-size: var(--sm);
 }
 
 .title__divider {
@@ -24,36 +31,25 @@
 }
 
 .title__name {
-    font-size: var(--lg);
+    font-size: var(--nm);
     font-weight: 700;
     margin-top: 1.2rem;
 }
 
 .title__ies {
-    font-size: var(--md);
-    font-weight: 700;
-    margin-top: 1.2rem;
-}
-
-.title__description {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: justify;
     font-size: var(--nm);
-    margin-top: 2rem;
+    margin-top: 1.2rem;
 }
 
 .title__duration {
     display: grid;
     grid-template-rows: auto 1fr;
     margin-top: 1.2rem;
-    font-size: var(--md);
+    font-size: var(--nm);
 }
 
 .title__duration span {
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 1.2rem;
 }
 
@@ -67,47 +63,35 @@
     margin-right: 1.6rem;
 }
 
-/* height */
-::-webkit-scrollbar {
-    width: .8rem;
-    height: .8rem;
+.title__ico {
+    display: flex;
+    align-content: center;
+    padding: 1.6rem;
+
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: var(--separation-lines);
-    border-radius: .4rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
+.title__ico img {
+    width: 75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2rem;
+    object-fit: cover;
 }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: var(--scrollbar);
-    border-radius: .4rem;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: var(--scrollbar-hover);
-}
-
 
 @media (min-width: 640px) {
-    .site-content {
-        flex-direction: row;
-        align-items: baseline;
-
-        overflow-x: scroll;
-        white-space: nowrap;
+    .site-content{
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .title {
-        min-width: 40rem;
-        max-width: 40rem;
-        margin-right: 1.6rem;
-        white-space: normal;
-    }
+   .title{
+        display: grid;
+        grid-template-columns: auto 30rem;
+        height: 30;
+        margin-right: 1rem;
+   }
 
 }
 
@@ -116,8 +100,12 @@
         margin-left: 5.2rem;
         margin-right: 5.2rem;
     }
+}
 
+@media (min-width:1000px) {
+    
     .title {
-        width: 50rem;
+        max-width: 100rem;
     }
+    
 }

@@ -14,31 +14,34 @@ const titles = [];
 function fillTitles() {
     titles.push(
         {
+            class: 'Pregrado',
             name: 'Ingenieria Mecatronica',
             ies: 'Universidad Santo Tomas',
-            description: 'Ingeniero Mecatrónico egresado de la Universidad Santo Tomás. Experiencia académica en planificación y ejecución de proyectos I+D+I, diseño y desarrollo de dispositivos y circuitos prototipo bajo herramientas CAD CAM, programación de PLC Siemens bajo metodología internacional GRAFCET y guía GEMMA, programación de dispositivos en plataformas Arduino, Raspberry, ESP32, ESP8266, Microcontroladores PIC de Microchip. Profesional con gran actitud de servicio, trabajo en equipo, compañerismo, capacidad de control, alto compromiso y abierto a cualquier conocimiento nuevo que permita mejorar el desarrollo de mis actividades.',
-            startDate: '2017',
-            finishDate: '2022'
+            ies_ico: ['./images/Escudo_Usta.png', 'Universidad Santo Tomas'],
+            startDate: 'Febrero 2017',
+            finishDate: 'Diciembre 2022'
         }
     )
 
     titles.push(
         {
-            name: 'Diseño De Productos Electrónicos Con Microcontroladores',
-            ies: 'Servicio Nacional de Aprendizaje - SENA',
-            description: 'Capacitación en diseño de dispositivos electrónicos con microcontroladores PIC programados en lenguaje ensamblador. Recoleccion de requisitos, planeacion y ejecucion de proyectos.',
-            startDate: '2021',
-            finishDate: '2021'
-        }
-    )
-
-    titles.push(
-        {
+            class: 'Tecnico',
             name: 'Tecnico laboral en Analisis de Sistemas y Mantenimiento',
             ies: 'Instituto Colombiano de Aprendizaje - INCAP',
-            description: 'Capacitacion en analisis, mantenimiento y reparacion de computadoras. Capacitacion en herramientas ofimaticas y diseño gráfico.',
-            startDate: '2012',
-            finishDate: '2013'
+            ies_ico: ['./images/Escudo_INCAP.png', 'Instituto Colombiano de Aprendizaje'],
+            startDate: 'Marzo 2012',
+            finishDate: 'Junio 2013'
+        }
+    )
+
+    titles.push(
+        {
+            class: 'Educacion Complementaria',
+            name: 'Diseño De Productos Electrónicos Con Microcontroladores',
+            ies: 'Servicio Nacional de Aprendizaje - SENA',
+            ies_ico: ['./images/Escudo_SENA.jpg', 'Servicio Nacional de Aprendizaje'],
+            startDate: 'Octubre 2021',
+            finishDate: '',
         }
     )
 }
@@ -48,35 +51,12 @@ fillTitles();
 function renderTitle(titlesArray) {
     titlesArray.forEach(title => {
 
-        /*
-        <div class="title">
-            <div class="title__name">Nombre del titulo obtenido</div>
-            <div class="title__ies">Instituto o IES</div>
-            <hr class="title__divider">
-            <div class="title__description"> Breve Descripcion</div>
-            <hr class="title__divider">
-            <div class="title__duration">
-                <span>Duracion</span>
-                <div class="title__duration__dates">
-                    
-                    <div class="title__duration__dates__data">
-                        <span>Fecha Inicio</span>
-                        <p> -- Fecha -- </p>
-                    </div>
-
-                    <div class="title__duration__dates__data">
-                        <span>Fecha Final</span>
-                        <p> -- Fecha -- </p>
-                    </div>
-                
-                </div>
-            </div>
-        </div>
-
-        */
-
         const titleItem = document.createElement('div');
         titleItem.classList.add('title');
+
+        const titleClass = document.createElement('p');
+        titleClass.classList.add('title__class');
+        titleClass.innerHTML = title.class;
 
         const titleName = document.createElement('p');
         titleName.classList.add('title__name');
@@ -85,16 +65,6 @@ function renderTitle(titlesArray) {
         const titleIes = document.createElement('p');
         titleIes.classList.add('title__ies');
         titleIes.innerHTML = title.ies;
-
-        const titleDivider = document.createElement('hr');
-        titleDivider.classList.add('title__divider');
-
-        const titleDescription = document.createElement('div');
-        titleDescription.classList.add('title__description');
-        titleDescription.innerHTML = title.description;
-
-        const titleDivider2 = document.createElement('hr');
-        titleDivider2.classList.add('title__divider');
 
         const titleDuration = document.createElement('div');
         titleDuration.classList.add('title__duration');
@@ -120,12 +90,24 @@ function renderTitle(titlesArray) {
         titleDuration.appendChild(titleSpanDuration);
         titleDuration.appendChild(titleDates);
 
-        titleItem.appendChild(titleName);
-        titleItem.appendChild(titleIes);
-        titleItem.appendChild(titleDivider);
-        titleItem.appendChild(titleDescription);
-        titleItem.appendChild(titleDivider2);
-        titleItem.appendChild(titleDuration);
+        const left = document.createElement('div');
+        
+        left.appendChild(titleClass);
+        left.appendChild(titleName);
+        left.appendChild(titleIes);
+        left.appendChild(titleDuration);
+
+        const ico = document.createElement('picture');
+        ico.classList.add('title__ico');
+        const ico_img = document.createElement('img');
+
+        ico_img.setAttribute('src', title.ies_ico[0]);
+        ico_img.setAttribute('alt', title.ies_ico[1]);
+
+        ico.appendChild(ico_img);
+
+        titleItem.appendChild(left);
+        titleItem.appendChild(ico);
 
         siteContent.appendChild(titleItem);
     });

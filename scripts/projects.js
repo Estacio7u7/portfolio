@@ -4,6 +4,8 @@ const siteContent = document.querySelector('.site-content');
 
 iconMobileMenu.addEventListener('click', toggleVisualization);
 
+window.addEventListener('load', renderProjects);
+
 function toggleVisualization() {
     mobileMenu.classList.toggle('non-visible');
     console.log('togling');
@@ -70,8 +72,8 @@ function fillProjects() {
 
 fillProjects();
 
-function renderProjects(projectsArray) {
-    projectsArray.forEach(project => {
+function renderProjects() {
+    engineeringProjects.forEach(project => {
 
         const projectItem = document.createElement('div');
         projectItem.classList.add('project');
@@ -100,8 +102,9 @@ function renderProjects(projectsArray) {
         projectSummary.innerHTML = project.description;
 
         const projectDivider2 = document.createElement('hr');
+        projectDivider2.setAttribute('id', 'divider__2')
         projectDivider2.classList.add('project__divider');
-
+        
         const projectInformation = document.createElement('div');
         projectInformation.classList.add('project__information');
         
@@ -149,5 +152,3 @@ function renderProjects(projectsArray) {
 
     });
 }
-
-renderProjects(engineeringProjects);

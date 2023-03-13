@@ -4,6 +4,7 @@ const siteContent = document.querySelector('.site-content');
 
 iconMobileMenu.addEventListener('click', toggleVisualization);
 
+window.addEventListener('load', renderMainPage);
 function toggleVisualization() {
     mobileMenu.classList.toggle('non-visible');
     console.log('togling');
@@ -89,5 +90,3 @@ function renderMainPage() {
     siteContent.appendChild(projects);
 
 }
-
-renderMainPage();

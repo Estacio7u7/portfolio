@@ -7,7 +7,6 @@
     display: flex;
     place-items: center;
     flex-direction: column;
-    justify-content: justify;
     margin-top: 1.6rem;
 }
 
@@ -93,12 +92,12 @@
     height: 1.6rem;
 }
 
-@media (min-width: 640px) {
-    .introduction {
-        max-width: 45rem;
-        margin-left: 7rem;
+@media (min-width: 640px) {    
+    .introduction{
+        width: 85%;
+        align-self: center;
     }
-    
+
     .introduction__title {
         font-size: var(--gg);
     }

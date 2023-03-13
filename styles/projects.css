@@ -9,28 +9,31 @@
 }
 
 .project {
-    margin: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
     padding: 1.6rem;
 
     background-color: var(--shadows);
     border-radius: 1.2rem;
+
+    font-size: var(--nm);
 }
 
 .project__divider {
     border: solid .2rem var(--separation-lines);
-    margin: 2rem 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     border-radius: .2rem;
 }
 
 .project__name {
-    font-size: var(--lg);
     font-weight: 700;
+    font-size: var(--md);
     margin-top: 1.2rem;
 }
 
 .project__role {
-    font-size: var(--md);
-    font-weight: 700;
+    font-size: var(--sm);
     margin-top: 1.2rem;
 }
 
@@ -40,7 +43,6 @@
     margin-right: auto;
 
     text-align: justify;
-    font-size: var(--nm);
     margin-top: 2rem;
 }
 
@@ -56,7 +58,6 @@
     display: grid;
     grid-template-rows: auto 1fr;
     margin-top: 1.2rem;
-    font-size: var(--md);
 }
 
 .project__information span {
@@ -73,27 +74,64 @@
     margin-top: 1.2rem;
 }
 
-@media (min-width:800px) {
-    .site-content {
-        flex-direction: row;
-        align-items: baseline;
 
-        overflow-x: scroll;
-        overflow-y: scroll;
-        white-space: nowrap;
+@media (min-width:640px) {
+    .project {
+        max-width: 72rem;
+    }
+    .project__description {
+        display: grid;
+        grid-template-columns: auto 30rem;
+        grid-gap: 1.2rem;
+    }
+}
+
+@media (min-width:800px) {
+    #divider__2 {
+        display: none;
     }
 
     .project {
-        min-width: 30rem;
-        max-width: 30rem;
-        white-space: normal;
+        display: grid;
+        max-width: 92rem;
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 30rem auto;
     }
+
+    .project__name {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    } 
+    
+    .project__role {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    
+    .project__divider {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+
+    .project__description {
+        grid-column: 1;
+        grid-row: 4;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project__information {
+        display: flex;
+        flex-direction: column;
+        grid-column: 2;
+        grid-row: 4;
+    }
+
 }
 
 @media (min-width: 1000px) {
     .project {
-        min-width: 50rem;
-        max-width: 50rem;
-        white-space: normal;
+        max-width: 1000px;
+        grid-template-columns: 50rem auto;
     }
 }
